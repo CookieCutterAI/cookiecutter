@@ -31,3 +31,14 @@ body {
     text-wrap: balance;
   }
 }
+
+/*@media screen and (max-width: 500px) {*/
+/* .buttonDiv {*/
+/*    font-size: 1px;*/
+/*    height: 2em;*/
+/*    grid-template-columns: repeat(2, minmax(0, 1fr));*/
+/*  } */
+/*  .textArea {*/
+/*    margin-top: 5.5em;*/
+/*  }*/
+/*}*/
