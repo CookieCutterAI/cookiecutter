@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
-
-import { Button } from "@/components/ui/button"
+import './styles.css'
+import { Button } from "../../components/ui/button"
 import {
   Card,
   CardContent,
@@ -14,15 +14,26 @@ import { Label } from "../../components/ui/label"
 
 export default function LoginForm() {
   return (
-    <Card className="mx-auto max-w-sm">
+    <div className="h-screen">
+    <Card className="mx-auto max-w-sm mt-[20vh] cardComp ">
       <CardHeader>
-        <CardTitle className="text-2xl">Login</CardTitle>
+        <CardTitle className="text-xl">Sign Up</CardTitle>
         <CardDescription>
-          Enter your email below to login to your account
+          Enter your information to create an account
         </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid gap-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="first-name">First name</Label>
+              <Input id="first-name" placeholder="Max" required />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="last-name">Last name</Label>
+              <Input id="last-name" placeholder="Robinson" required />
+            </div>
+          </div>
           <div className="grid gap-2">
             <Label htmlFor="email">Email</Label>
             <Input
@@ -33,29 +44,25 @@ export default function LoginForm() {
             />
           </div>
           <div className="grid gap-2">
-            <div className="flex items-center">
-              <Label htmlFor="password">Password</Label>
-              <Link href="#" className="ml-auto inline-block text-sm underline">
-                Forgot your password?
-              </Link>
-            </div>
-            <Input id="password" type="password" required />
+            <Label htmlFor="password">Password</Label>
+            <Input id="password" type="password" />
           </div>
           <Button type="submit" className="w-full">
-            Login
+            Create an account
           </Button>
           <Button variant="outline" className="w-full">
-            Login with Google
+            Sign up with GitHub
           </Button>
         </div>
         <div className="mt-4 text-center text-sm">
-          Don&apos;t have an account?{" "}
-          <Link href="#" className="underline">
-            Sign up
+          Already have an account?{" "}
+          <Link href="/login" className="underline">
+            Log In
           </Link>
         </div>
       </CardContent>
     </Card>
+    </div>
   )
 }
 

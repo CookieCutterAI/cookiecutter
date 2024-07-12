@@ -26,7 +26,7 @@ export function Interface() {
 
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#5204f9_0%,#adaed5_50%,#5204f9_100%)] " />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[##6c6c9b] px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              <Link href="/signup">Get Started </Link>
+              <Link href="/login">Get Started </Link>
             </span>
           </button>
         </div>
