@@ -8,17 +8,14 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 //import { useChat } from 'ai/react'
 import Image from 'next/image'
-import SuggestionBtns  from '@/components/SuggestionBtns'
-import Navbar from "./ui/Navbar";
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
 import Toolbar from "./Toolbar";
-
+import Link from "next/link";
 export function Interface() {
   const [messages, setMessages] = useState<CoreMessage[]>([]);
   const [input, setInput] = useState('');
   const [data, setData] = useState<any>();
-  const [show, setShow] = useState(true)
   //const { messages, input, handleInputChange, handleSubmit, data } = useChat();
   return (
     <div className="flex flex-col h-screen bg-[#0c0c14] text-[#333]">
@@ -29,7 +26,7 @@ export function Interface() {
 
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#5204f9_0%,#adaed5_50%,#5204f9_100%)] " />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[##6c6c9b] px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              Get Started
+              <Link href="/signup">Get Started </Link>
             </span>
           </button>
         </div>
