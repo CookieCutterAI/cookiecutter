@@ -20,7 +20,7 @@ let prompText = `
     Dietary Info: (only if asked) [ ]
     Recipe: [ ]
 
-
+    Make sure to remove all 
   ` 
 
 export async function continueConversation(messages: CoreMessage[]) {

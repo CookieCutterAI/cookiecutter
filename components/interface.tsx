@@ -64,7 +64,7 @@ export function Interface() {
             className="flex-1 mr-2 max-w-[400px] shadow-[0_0_10px_rgba(110,255,110,0.5)] h-14 w-14"
           />
 
-        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#b1b5f9,45%,#d1d3fc,55%,#b1b5f9)] bg-[length:200%_100%] px-6 font-medium text-slate-950 dark:text-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" >
+        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#b1b5f9,45%,#d1d3fc,55%,#b1b5f9)] bg-[length:200%_100%] px-6 font-medium text-gray-950 dark:text-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" >
             Send
         </button>
         </form>
@@ -77,7 +77,7 @@ export function Interface() {
             {/* {data && <pre>{JSON.stringify(data, null, 2)}</pre>}*/}         
           {messages.map((m, i) => (
             <div key={i} className="whitespace-pre-wrap text-2xl ">
-              {m.role === 'user' ? '' : 'Cookie'}
+              {m.role === 'user' ? 'User: ' : 'Cookie: '}
               {m.content as string}
             </div>
           ))}

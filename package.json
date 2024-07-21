@@ -21,6 +21,7 @@
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "firebase": "^9.23.0",
     "framer-motion": "^11.2.12",
     "lucide-react": "^0.397.0",
     "mini-svg-data-uri": "^1.4.4",
@@ -29,6 +30,8 @@
     "react": "^18.3.1",
     "react-dom": "^18",
     "react-element-to-jsx-string": "^15.0.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-firebaseui": "^6.0.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"

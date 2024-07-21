@@ -4,8 +4,8 @@ import Link from "next/link"
 
 const Footer = () => {
   return (
-    <div>
-            <footer className="py-6 w-full shrink-0 border-t text-xs text-muted-foreground flex items-center justify-between px-4 md:px-6">
+    <div className='bg-[#ecebdc] text-[#0c0c14]'>
+      <footer className="py-6 w-full shrink-0 border-t text-xs text-muted-foreground flex items-center justify-between px-4 md:px-6">
         <p>&copy; 2024 CookieCutter. All rights reserved.</p>
         <nav className="flex gap-4">
           <Link href="https://x.com/_cookmecutter/" className="hover:underline underline-offset-4" prefetch={false}>
