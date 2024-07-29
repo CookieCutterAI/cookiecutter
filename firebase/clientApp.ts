@@ -1,14 +1,14 @@
 // Import the functions you need from the SDKs you need
-import firebase from "firebase/app";
-import "firebase/auth"
-import "firebase/firestore"
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth"
+import { getFirestore } from "firebase/firestore"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const clientCredentials= {
-  apiKey: "AIzaSyAcJEwBgwJ-JuPYsZ-gDyaU6uP-1_I92vQ",
-  authDomain: "cookiecutter-47929.firebaseapp.com",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
   projectId: "cookiecutter-47929",
   storageBucket: "cookiecutter-47929.appspot.com",
   messagingSenderId: "1088428268671",
@@ -16,6 +16,8 @@ const clientCredentials= {
 };
 
 // Initialize Firebase
-if (!firebase.apps.length) {
-  firebase.initializeApp(clientCredentials);
-}
+const app = initializeApp(clientCredentials)
+
+
+export const auth = getAuth()
+export const db = getFirestore()
